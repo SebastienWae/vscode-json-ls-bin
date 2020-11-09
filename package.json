@@ -1,0 +1,41 @@
+{
+  "name": "vscode-json-ls-bin",
+  "description": "JSON Language Server binary extracted from VSCode",
+  "version": "1.0.2",
+  "author": "Sebastien Waegeneire",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "homepage": "https://github.com/SebastienWae/vscode-json-ls-bin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastienWae/vscode-json-ls-bin.git"
+  },
+  "dependencies": {
+    "jsonc-parser": "^2.2.1",
+    "request-light": "^0.3.0",
+    "vscode-json-languageservice": "^3.10.0",
+    "vscode-languageserver": "7.0.0-next.3",
+    "vscode-nls": "^5.0.0",
+    "vscode-nls-dev": "^3.3.2",
+    "vscode-uri": "^2.1.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.10",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^12.11.7",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi-reporters": "^1.1.7"
+  },
+  "bin": {
+    "json-ls": "dist/jsonServerMain.js"
+  },
+  "scripts": {
+    "compile": "npx webpack"
+  }
+}
